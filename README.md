@@ -5,4 +5,4 @@
 
 ## 如何使用
 
-在tampermonkey中导入脚本，启用即可
+在tampermonkey中导入脚本csdn.js，启用即可
