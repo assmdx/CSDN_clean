@@ -6,4 +6,4 @@
 ## 如何使用
 
 1. chrome安装 tampermonkey插件
-2. 点击[csdn.user.js](https://github.com/assmdx/CSDN_clean/blob/master/csdn.user.js)，安装即可
+2. 点击[csdn.user.js](https://github.com/assmdx/CSDN_clean/raw/master/csdn.user.js)，安装即可
