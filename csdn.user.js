@@ -2,8 +2,8 @@
 // @name         CSDN_clean
 // @namespace    CSDN_clean
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  清除csdn广告!
+// @author       assmdx
 // @match        https://blog.csdn.net/*
 // @grant        none
 // ==/UserScript==
