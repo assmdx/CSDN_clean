@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
+// @name         CSDN_clean
+// @namespace    CSDN_clean
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://blog.csdn.net/u013165921/article/details/78230778
+// @match        https://blog.csdn.net/*
 // @grant        none
 // ==/UserScript==
 
@@ -27,6 +27,6 @@
 
     //点击阅读更多
     var e = document.createEvent("MouseEvents");
-    e.initEvent("click", true, true);　　　　　　　　　　　　　　//这里的click可以换成你想触发的行为
-    document.getElementById("btn-readmore").dispatchEvent(e);　　　//这里的clickME可以换成你想触发行为的DOM结点
+    e.initEvent("click", true, true);　　　　　　　　　　　　　　
+    document.getElementById("btn-readmore").dispatchEvent(e);　　　
 })();
