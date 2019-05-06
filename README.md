@@ -5,4 +5,5 @@
 
 ## 如何使用
 
-在tampermonkey中导入脚本csdn.js，启用即可
+1. chrome安装 tampermonkey插件
+2. 点击[csdn.js](https://github.com/assmdx/CSDN_clean/edit/master/csdn.js)，安装即可
