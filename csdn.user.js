@@ -2,8 +2,8 @@
 // @name         CSDN_clean
 // @namespace    CSDN_clean
 // @version      0.1
-// @description  清除csdn广告!
-// @author       assmdx
+// @description  try to take over the world!
+// @author       You
 // @match        https://blog.csdn.net/*
 // @grant        none
 // ==/UserScript==
@@ -17,13 +17,14 @@
     var child2 =document.querySelector("#kp_box_476 > div > div.light-box");
     child2.parentNode.removeChild(child2);
 
-
     var child3 =document.querySelector("#inlineFrameExample");
     child3.parentNode.removeChild(child3);
 
-
     var child4 =document.querySelector("#adContent");
     child4.parentNode.removeChild(child4);
+
+    var child5 =document.querySelector("#asideFooter");
+    child5.parentNode.removeChild(child5);
 
     //点击阅读更多
     var e = document.createEvent("MouseEvents");
