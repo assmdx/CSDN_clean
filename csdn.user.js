@@ -46,4 +46,7 @@
     e.initEvent("click", true, true);　　
     var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　　　　　　　　　
     readmore && readmore.dispatchEvent(e);　　　
+	
+    //内容块居中
+    document.querySelector('#mainBox > main').style.left = '-170px'
 })();
