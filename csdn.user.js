@@ -44,9 +44,12 @@
     //点击阅读更多
     var e = document.createEvent("MouseEvents");
     e.initEvent("click", true, true);　　
-    var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　　　　　　　　　
-    readmore && readmore.dispatchEvent(e);　　　
+    var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　 readmore && readmore.dispatchEvent(e);　　　
 	
     //内容块居中
-    document.querySelector('#mainBox > main').style.left = '-170px'
+    var mainBodyDOM = document.querySelector('#mainBox > main')
+    var mainBodyDOMWidth = mainBodyDOM.offsetWidth
+    var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
+    var windowWidth = window.innerWidth
+    mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
 })();
