@@ -40,6 +40,8 @@
         child7 && child7.parentNode.removeChild(child7) && clearInterval(m)    
     },3000)
     
+    var child8 = document.querySelector("#container")
+    child8 && child8.parentNode.removeChild(child8)
     
     //点击阅读更多
     var e = document.createEvent("MouseEvents");
