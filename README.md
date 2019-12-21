@@ -1,6 +1,8 @@
 # CSDN_clean
 去掉csdn广告的脚本，配合chrome tampermonkey插件使用
 
+ps：打开baidu,谷歌有彩蛋哦....
+
 
 
 ## 如何使用
