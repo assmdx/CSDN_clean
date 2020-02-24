@@ -18,11 +18,13 @@
      readmore && readmore.dispatchEvent(e);　　　
      
      //内容块居中
-     var mainBodyDOM = document.querySelector('#mainBox > main')
+     var mainBodyDOM = document.querySelector('#mainBox > main > div.blog-content-box')
      var mainBodyDOMWidth = mainBodyDOM.offsetWidth
      var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
      var windowWidth = window.innerWidth
-     mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
+     if (mainBodyDOM) {
+        mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
+     }
 
      var right =  document.querySelector("body > div.main_father.clearfix.d-flex.justify-content-center > div.recommend-right.align-items-stretch.clearfix");
      right && right.parentNode.removeChild(right);
