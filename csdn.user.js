@@ -16,15 +16,6 @@
      e.initEvent("click", true, true);　　
      var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　 
      readmore && readmore.dispatchEvent(e);　　　
-     
-     //内容块居中
-     var mainBodyDOM = document.querySelector('#mainBox > main > div.blog-content-box')
-     var mainBodyDOMWidth = mainBodyDOM.offsetWidth
-     var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
-     var windowWidth = window.innerWidth
-     if (mainBodyDOM) {
-        mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
-     }
 
      var right =  document.querySelector("body > div.main_father.clearfix.d-flex.justify-content-center > div.recommend-right.align-items-stretch.clearfix");
      right && right.parentNode.removeChild(right);
@@ -52,6 +43,16 @@
 
     var child6 = document.querySelector("body > div.tool-box.vertical")
     child6 && child6.parentNode.removeChild(child6)
+
+    //内容块居中
+    var mainBodyDOM = document.querySelector('#mainBox > main > div.blog-content-box')
+    if (mainBodyDOM) {
+       var mainBodyDOMWidth = mainBodyDOM.offsetWidth
+       var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
+       var windowWidth = window.innerWidth
+       console.log(`${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px` )
+       mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
+    }
     
     let m_counter = 0
     let m = setInterval( () => {
