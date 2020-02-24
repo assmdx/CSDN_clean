@@ -10,8 +10,24 @@
 
 (function() {
     'use strict';
+
+     //CSDN点击阅读更多
+     var e = document.createEvent("MouseEvents");
+     e.initEvent("click", true, true);　　
+     var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　 
+     readmore && readmore.dispatchEvent(e);　　　
+     
+     //内容块居中
+     var mainBodyDOM = document.querySelector('#mainBox > main')
+     var mainBodyDOMWidth = mainBodyDOM.offsetWidth
+     var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
+     var windowWidth = window.innerWidth
+     mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
+
+     var right =  document.querySelector("body > div.main_father.clearfix.d-flex.justify-content-center > div.recommend-right.align-items-stretch.clearfix");
+     right && right.parentNode.removeChild(right);
     //删除广告    
-    var child= document.querySelector("body > div.pulllog-box");
+    var child = document.querySelector("body > div.pulllog-box");
     child && child.parentNode.removeChild(child);
 
     var child2 = document.querySelector("#kp_box_476 > div > div.light-box");
@@ -92,16 +108,5 @@
 	child21.style.backgroundRepeat = "no-repeat"
 	child21.style.backgroundSize = "cover"
 
-    //CSDN点击阅读更多
-    var e = document.createEvent("MouseEvents");
-    e.initEvent("click", true, true);　　
-    var readmore = document.querySelector("#mainBox > main > div.hide-article-box.hide-article-pos.text-center > a")　　　 
-    readmore && readmore.dispatchEvent(e);　　　
-	
-    //内容块居中
-    var mainBodyDOM = document.querySelector('#mainBox > main')
-    var mainBodyDOMWidth = mainBodyDOM.offsetWidth
-    var mainBodyDOMNowLeft = mainBodyDOM.getBoundingClientRect().left
-    var windowWidth = window.innerWidth
-    mainBodyDOM.style.left = `${ (windowWidth - mainBodyDOMWidth)/2 - mainBodyDOMNowLeft}px`    
+   
 })();
